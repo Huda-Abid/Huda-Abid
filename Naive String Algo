@@ -1,0 +1,21 @@
+for (int s=0;s<n-m;s++)
+{
+  int i=0;
+  for (i=0;i<m;i++)
+  { 
+    if T[s+i]!=P[i] {break;}
+  }
+  if (i==0)
+  {
+    s++;
+  }
+  else if (i==m)
+  {
+    cout<<"Matched pattern found";
+    s+=m;
+  }
+  else
+  {
+    s+=i;
+  }
+}
