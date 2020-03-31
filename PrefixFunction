@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+char P[5]={'A','B','A','B','C'};
+int m=5;
+int pie[5]={};
+pie[0]=0;
+int i=0;
+int q;
+for (q=1;q<m;q++)
+{
+  while(i>0 && P[i]!=P[q])
+    i=pie[i];
+  if(P[i]==P[q])
+  {
+    i++;
+  }
+  pie[q]=i;
+}
+return 0;
+}
