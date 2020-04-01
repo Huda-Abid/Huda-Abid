@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+char T[7]={'P','A','M','P','A','T','P'};
+char P[3]={'P','A','M');
+int n=7; int m=3;
+for (int s=0;s<=n-m;s++)
+{
+  int i=m-1;
+  for (i;i>=0;i--)
+  {
+    if(T[s+i]!=P[i]) {break;}
+  }
+  if (i==-1)
+  {
+    cout<<"Pattern found"<<endl;
+    s++;
+  }
+  else
+  {
+    int j=i; i--; int c=1;
+    for (i;i>=0;i--)
+    {
+      if (P[i]==T[s+j]) {break;}
+      else {c++;}
+    }
+    s+=c;
+  }
+}
+return 0;
+}
