@@ -6,7 +6,7 @@ char T[6]={'A','B','C','D','E','F'};
 char P[3]={'A','B','D'};
 int m=3;
 int n=6;
-for (int s=0;s<n-m;s++)
+for (int s=0;s<=n-m;s++)
 {
   int i=0;
   for (i=0;i<m;i++)
